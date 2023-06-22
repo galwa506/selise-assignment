@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { CommonModule } from '@angular/common';
-
+import { HousingLocation } from '../housinglocation';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -22,6 +22,16 @@ import { CommonModule } from '@angular/common';
   `,
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
 
+export class HomeComponent {
+  housingLocation: HousingLocation = {
+    id: 9999,
+    name: 'Test Home',
+    city: 'Test city',
+    state: 'ST',
+    photo: 'assets/example-house.jpg',
+    availableUnits: 99,
+    wifi: true,
+    laundry: false,
+  };
 }

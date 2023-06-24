@@ -106,8 +106,6 @@ export class HousingService {
       laundry: true
     }
   ];
-
-  constructor() { }
   getAllHousingLocations(): HousingLocation[] {
     return this.housingLocationList;
   }
@@ -115,5 +113,7 @@ export class HousingService {
   getHousingLocationById(id: number): HousingLocation | undefined {
     return this.housingLocationList.find(housingLocation => housingLocation.id === id);
   }
+  constructor() { }
+
   
 }
